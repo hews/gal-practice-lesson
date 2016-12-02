@@ -11,9 +11,9 @@
 
 ---
 
-## Our First Iterator: Map
+# Our First Iterator: Map
 
-### Objectives
+## Objectives
 
 | Type       | Objective |
 |:-----------|:----------|
@@ -22,16 +22,23 @@
 | Conceptual | Explain when you would want to use `Array.prototype.map` instead of a `for` loop. |
 | Conceptual | List the four fundamental actions you can apply to sequences/iterables in JavaScript, and explain when to use each. |
 
-### Estimated Length
+## Estimated Length
 
 | Task                      | Minutes |
 |:--------------------------|:-------:|
 | Instruction               |    25   |
 | Activities and challenges |    25   |
+| Wrap-up                   |    10   |
 
-### Example Lesson Plan
+## Example Lesson Plan
 
---iteration--
+#### Framing
+
+what we have covered, what we are covering today, what we shall cover next.
+
+what the purpose of this lesson is. real-world scenarios.
+
+#### Iteration and Iteration Methods
 
 you know about for loop already.
 
@@ -45,6 +52,11 @@ q: how is it different from other loops? when do you use it?
 --common iteration action--
 
 so, given that you want to want to iterate over an array, blah blah
+
+> *__Instructor:__ though it's not suggested, you may abbreviate the below
+> "you do" activities to questions 1 and 2 if you want to complete the lesson
+> sooner or if the students are having trouble with basic for-loop syntax. See
+> [Note 1](#notes).*
 
 :write for loops that do the following: 
 
@@ -64,9 +76,9 @@ and do:
 3.  filter/select
 4.  reduce/inject/fold
 
-we're going to start with map.
+#### Iteration Method: Map (`Array.prototype.map`)
 
---map intro--
+we're going to start with map.
 
 this is a very common thing. we want to create a new array of values that
 correspond to values in the old array. real world examples include...
@@ -103,26 +115,53 @@ questions:
     - not working with an array (objects, eg) or some structure that
       hasn't implemented this interface
 
---callbacks--
+#### Callbacks: Functions as Arguments
+
+> *__Instructor:__ for purposes of time, this section can be shortened.
+> Introduce the idea of "callbacks", and "functions as first-class objects" in
+> JavaScript, and note when we will cover them in-depth, but the activity can
+> be made part of enrichment or a stretch goal for the exercise.*
 
 this idea of passing one function to another is essential to JS, and we
 will return to it over and over and over…
 
-in fact, it's not a crazy idea, you can imagine how it works. let's build
-a simple version of the map function together!
+first class functions
 
 :we do
 
+in fact, it's not a crazy idea, you can imagine how it works. let's build
+a simple version of the map function together!
+
 http://underscorejs.org/docs/underscore.html#section-20
 
-now we need to practice! activity
+### Wrap-up (test of 3L Header)
 
-### Example Student Lesson Version (Handout)
+> *__Instructor:__ if the exercise is done in-class, then do the wrap-up
+> afterwards. If the exercise is done as an assignment outside of class, plan
+> time to do the first question in it as a "you do" before doing the wrap-up.*
+
+CFU - objectives
+Questions and themes
+
+## Example Student Lesson Version (Handout)
 
 abbreviated version with the code examples and docs links.
 
-### Example Activity
+## Example Exercise
 
 ~~**[The Fixer]()**~~
 
 Map-specific example
+
+---
+<a name="notes"></a>
+
+- Note 1: If the students are not fluently writing for loops in the introduction
+  to this assignment, then they need to receive more practice immediately: this
+  ability is assumed for all upcoming lessons. Do two things:
+
+  1.  Have all the students write out answers to this lesson's exercise using
+      `for` loop syntax (first), and then `#map` syntax.
+  2.  Offer an optional exercise as an out-of-class assignment that allows them
+      to practice writing `for` loops.
+      
