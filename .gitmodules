@@ -1,0 +1,21 @@
+[submodule "introduction"]
+	path = introduction
+	url = ./introduction
+[submodule "amended-prompt"]
+	path = amended-prompt
+	url = ./amended-prompt/
+[submodule "activity"]
+	path = activity
+	url = ./activity
+[submodule "assessment"]
+	path = assessment
+	url = ./assessment/
+[submodule "curriculum"]
+	path = curriculum
+	url = ./curriculum/
+[submodule "lesson"]
+	path = lesson
+	url = ./lesson/
+[submodule "unit"]
+	path = unit
+	url = ./unit/
