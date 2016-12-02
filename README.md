@@ -32,13 +32,36 @@
 
 ## Example Lesson Plan
 
-#### Framing
+### Framing
 
-what we have covered, what we are covering today, what we shall cover next.
+By now we have covered all of the basic syntax, types and data structures of
+the JavaScript language. We have also learned about the most important form of
+code organization in JavaScript: functions.
 
-what the purpose of this lesson is. real-world scenarios.
+However, as we all know, this is just the start! Now we are going to learn the
+APIs, methods and patterns we use to solve the most common problems we face in
+JavaScript. **First off, we are going to explore working with collections of 
+data: how to manage them, transform them, and query them.**
 
-#### Iteration and Iteration Methods
+After that, we will take a look back at the language in more depth, exploring
+the complex ideas and structures that help us become more powerful and efficient
+users of JavaScript.
+
+### This Lesson
+
+In this lesson we are going to introduce the idea of *iteration* and *iteration
+methods* (see **[Note 1][#notes]**). These tools help us to work with 
+collections of data in an organized way.
+
+When do we work with collections of data, using *iteration methods*?
+
+When sending or recieving HTTP/XHR requests (usually via JSON), when inserting 
+or querying data stored in NoSQL databases (usually via JSON/BSON), when
+presenting data to the user via a UI, or reading in data submitted into forms.
+
+In short, almost everything we do in JavaScript-based web applications!
+
+### Iteration and Iteration Methods
 
 you know about for loop already.
 
@@ -56,7 +79,7 @@ so, given that you want to want to iterate over an array, blah blah
 > *__Instructor:__ though it's not suggested, you may abbreviate the below
 > "you do" activities to questions 1 and 2 if you want to complete the lesson
 > sooner or if the students are having trouble with basic for-loop syntax. See
-> [Note 1](#notes).*
+> __[Note 2](#notes)__.*
 
 :write for loops that do the following: 
 
@@ -76,7 +99,7 @@ and do:
 3.  filter/select
 4.  reduce/inject/fold
 
-#### Iteration Method: Map (`Array.prototype.map`)
+### Iteration Method: Map (`Array.prototype.map`)
 
 we're going to start with map.
 
@@ -115,7 +138,7 @@ questions:
     - not working with an array (objects, eg) or some structure that
       hasn't implemented this interface
 
-#### Callbacks: Functions as Arguments
+### Callbacks: Functions as Arguments
 
 > *__Instructor:__ for purposes of time, this section can be shortened.
 > Introduce the idea of "callbacks", and "functions as first-class objects" in
@@ -134,7 +157,7 @@ a simple version of the map function together!
 
 http://underscorejs.org/docs/underscore.html#section-20
 
-### Wrap-up (test of 3L Header)
+### Wrap-up
 
 > *__Instructor:__ if the exercise is done in-class, then do the wrap-up
 > afterwards. If the exercise is done as an assignment outside of class, plan
@@ -156,12 +179,21 @@ Map-specific example
 ---
 <a name="notes"></a>
 
-- Note 1: If the students are not fluently writing for loops in the introduction
-  to this assignment, then they need to receive more practice immediately: this
-  ability is assumed for all upcoming lessons. Do two things:
+- **Note 1:** There isn't a clear, universal, collective term for the group of 
+  methods we are describing here. Common names usually include the terms 
+  *iterate*, [*enumerate*][enum], and/or *functional*.  Since in JavaScript 
+  these methods will work on instances of the `Iterator` class and the 
+  *iterable* interface defined for the `for...of` construct, we will use the 
+  terms **iteration** and **iteration methods**.
+- **Note 2:** If the students are not fluently writing for loops in the 
+  introduction to this assignment, then they need to receive more practice 
+  immediately: this ability is assumed for all upcoming lessons. Do two things:
 
   1.  Have all the students write out answers to this lesson's exercise using
       `for` loop syntax (first), and then `#map` syntax.
   2.  Offer an optional exercise as an out-of-class assignment that allows them
       to practice writing `for` loops.
       
+<!-- LINKS -->
+
+[enum]: https://en.wikipedia.org/wiki/Enumeration
