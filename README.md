@@ -50,7 +50,7 @@ users of JavaScript.
 ### This Lesson
 
 In this lesson we are going to introduce the idea of *iteration* and *iteration
-methods* (see **[Note 1][#notes]**). These tools help us to work with 
+methods* (see **[Note 1](#notes)**). These tools help us to work with 
 collections of data in an organized way.
 
 When do we work with collections of data, using *iteration methods*?
