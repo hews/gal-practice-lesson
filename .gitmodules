@@ -1,21 +1,21 @@
 [submodule "introduction"]
 	path = introduction
-	url = ./introduction
+	url = git@gist.github.com:40010b65cf60391322a08e4963504f8d.git
 [submodule "amended-prompt"]
 	path = amended-prompt
-	url = ./amended-prompt/
-[submodule "activity"]
-	path = activity
-	url = ./activity
-[submodule "assessment"]
-	path = assessment
-	url = ./assessment/
+	url = git@gist.github.com:27dbb03a0451911ed96bca81ef446f5b.git
 [submodule "curriculum"]
 	path = curriculum
-	url = ./curriculum/
-[submodule "lesson"]
-	path = lesson
-	url = ./lesson/
+	url = git@gist.github.com:094566de033fc7a690e62879856c97fb.git
 [submodule "unit"]
 	path = unit
-	url = ./unit/
+	url = git@gist.github.com:b88bc35fb14b368271556e71796eef85.git
+[submodule "assessment"]
+	path = assessment
+	url = git@gist.github.com:c0fc2fd88ed74b7da0e061bd6d348cc8.git
+[submodule "lesson"]
+	path = lesson
+	url = git@gist.github.com:0c8f07dcb62a739697367a16b8fce690.git
+[submodule "activity"]
+	path = activity
+	url = git@gist.github.com:3deafcb8c750ad95ace5a955e35effb7.git
