@@ -269,7 +269,7 @@ Alright, that means it's time to practice! Let's do a few together.
    * Transform each of the below colors into hex values in the format:
    * "#FF33A1", eg.
    *
-   * Given: you can transform a decimal integer into a hexadecimal integer
+   * Note: you can transform a decimal integer into a hexadecimal integer
    * with #toString(16):
    *
    * (255).toString(16); //=> 'ff'
@@ -380,7 +380,7 @@ Map-specific example
 
 [repo]:    https://gist.github.com/hews/5528dfcd982b1959eab4156d8a760527
 [handout]: https://gist.github.com/hews/5528dfcd982b1959eab4156d8a760527#file-handout-md
-[for-prc]: https://gist.github.com/hews/5528dfcd982b1959eab4156d8a760527#file-forpractice-js
-[for-sol]: https://gist.github.com/hews/5528dfcd982b1959eab4156d8a760527#file-_-solution_forpractice-js
-[map-prc]: https://gist.github.com/hews/5528dfcd982b1959eab4156d8a760527#file-mappractice-js
-[map-sol]: https://gist.github.com/hews/5528dfcd982b1959eab4156d8a760527#file-_-solution_mappractice-js
+[for-prc]: https://gist.github.com/hews/5528dfcd982b1959eab4156d8a760527#file-xforpractice-js
+[for-sol]: https://gist.github.com/hews/5528dfcd982b1959eab4156d8a760527#file-xx_-solution_forpractice-js
+[map-prc]: https://gist.github.com/hews/5528dfcd982b1959eab4156d8a760527#file-xmappractice-js
+[map-sol]: https://gist.github.com/hews/5528dfcd982b1959eab4156d8a760527#file-xx_-solution_mappractice-js
