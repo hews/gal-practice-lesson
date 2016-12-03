@@ -121,7 +121,7 @@ back into the swing of iteration by practicing a little.
       "hemp hamper for cloth diapers",
       "willamette beekeepers' collective mustache wax kit",
       "bernie sanders throw pillow",
-      "his & hers hobby smocks",
+      "zhers & zhers hobby smocks",
       "himalayan salt cellar",
       "cruelty-free, no-tears dog shampoo"
     ];
