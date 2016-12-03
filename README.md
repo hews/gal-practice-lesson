@@ -73,7 +73,7 @@ constructs of JavaScript and most *structured* (ie, modern) languages: the
 
 - **Question (CFU):** *What does iteration mean?*
 - **Question (CFU):** *How are `for` loops different from other loops?
-  When and why do you use them?
+  When and why do you use them?*
 
 In essence, whenever we iterate, we can do it with a `for` loop. So let's get
 back into the swing of iteration by practicing a little.
@@ -111,17 +111,17 @@ back into the swing of iteration by practicing a little.
       "an explicity feminist composting collective"
     ];
 
-    // 2.  Ok, I think we've settled on a boutique for home goods made from
+    // 2.  Ok, I think we've settled on a boutique for home goods that are made
     //     locally and sustainably. Let's do it right though, and go through 
     //     and screen-print birds on everything. Take our stock, and replace 
-    //     each item with a string in the form of
-    //     "(original item) with a bird on it"
+    //     each item with a string in the form of:
+    //     "(original item) with a bird on it".
     let oldStock = [
       "shibori-dyed dish towel",
       "hemp hamper for cloth diapers",
       "willamette beekeepers' collective mustache wax kit",
       "bernie sanders throw pillow",
-      "zhers & zhers hobby smocks",
+      "gender-neutral hobby smocks",
       "himalayan salt cellar",
       "cruelty-free, no-tears dog shampoo"
     ];
@@ -164,18 +164,18 @@ back into the swing of iteration by practicing a little.
 In fact, these four problems represent the essential types of iterative actions
 you perform on data collection:
 
-1.  Repetition (simple iteration): perform some action for each item in
+1.  **Repetition** (simple iteration): perform some action for each item in
     a collection, usually resulting in a side effect (instead of returning a
     value). Common method names: `#forEach` (JavaScript), `#each`.
-2.  Mapping, or transforming: transform each item in the given collection into
+2.  **Mapping**: transform each item in the given collection into
     a new format. This returns a collection of the same size, with each item
     having been "mapped" to a new value. Common method names: `#map` 
     (JavaScript), `#collect`.
-3.  Filtering: transform the collection itself, removing certain items, and
+3.  **Filtering**: transform the collection itself, removing certain items, and
     returning a new collection. The items themselves are not transformed.
     Common method names: `#filter` (JavaScript), `#select`, `#reject`.
-4.  Reducing: transform the collection itself, returning some value (usually) of
-    a different type. The returned value can be a single piece of data or a
+4.  **Reducing**: transform the collection itself, returning some value (usually)
+    of a different type. The returned value can be a single piece of data or a
     new collection, but is always the result of applying a reduction algorithm
     to each item in the original array. Common method names: `#reduce` 
     (JavaScript), `#inject`, `#fold`.
@@ -206,7 +206,7 @@ let oldStock = [
   "hemp hamper for cloth diapers",
   "willamette beekeepers' collective mustache wax kit",
   "bernie sanders throw pillow",
-  "his & hers hobby smocks",
+  "gender-neutral hobby smocks",
   "himalayan salt cellar",
   "cruelty-free, no-tears dog shampoo"
 ];
