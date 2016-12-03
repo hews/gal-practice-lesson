@@ -22,3 +22,6 @@
 [submodule "student-repo"]
 	path = student-repo
 	url = git@gist.github.com:5528dfcd982b1959eab4156d8a760527.git
+[submodule "map-mania"]
+	path = map-mania
+	url = git@gist.github.com:9066757603d2d6c9519730534f42c269.git

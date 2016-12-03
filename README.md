@@ -376,11 +376,7 @@ together.
 
 ## Example Exercise
 
-(TODO)
-
-~~**[The Fixer]()**~~
-
-Map-specific example
+- **[Map-mania][map-mania]** (unfinished)
 
 ---
 
@@ -414,3 +410,5 @@ Map-specific example
 [map-sol]: https://gist.github.com/hews/5528dfcd982b1959eab4156d8a760527#file-xx_-solution_mappractice-js
 
 [under-map]: http://underscorejs.org/docs/underscore.html#section-20
+
+[map-mania]: https://gist.github.com/hews/9066757603d2d6c9519730534f42c269
