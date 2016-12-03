@@ -235,6 +235,35 @@ Alright, that means it's time to practice! Let's do a few together.
   // lessons/map/mapPractice.js
 
   /*
+   * Transform each of the children objects below into names in the format:
+   * "1. Ching-Howe, Noelani M.", eg.
+   */
+  
+  let losFelizDaycareRoster = [
+    {firstName: "Noelani", middleInitial: "M", lastName: "Ching-Howe"},
+    {firstName: "Wallis",  middleInitial: "P", lastName: "Duffy"},
+    {firstName: "Minke",   middleInitial: "R", lastName: "Hughes"},
+    {firstName: "Nico",    middleInitial: "L", lastName: "Akhiam"},
+    {firstName: "Harvey",  middleInitial: "G", lastName: "Leece"},
+  ];
+  ```
+- **Question:** how did we know we could get the index of the array? What
+  complications are there for understanding / memorizing how to use functions
+  that take other functions as arguments.
+  - *Return to the documentation, and write out the signatures.*
+- **Question:** do we need to have a separate definition for the transforming
+  function? What happens if we "inline" the function as a literal argument?
+- **Question:** what are the costs and benefits of using this inline, anonymous
+  function?
+  - *Note that we lose testability and semantic naming, gain clarity and
+    readability. Quickly note there are actually more issues we will approach 
+    later.*
+- **Practice (WD): (5 minutes)**
+
+  ```js
+  // lessons/map/mapPractice.js
+
+  /*
    * Transform each of the below colors into hex values in the format:
    * "#FF33A1", eg.
    *
@@ -253,27 +282,11 @@ Alright, that means it's time to practice! Let's do a few together.
     {name: "next",  html: "<li><button>next</button><li>",  color: [ 75,   0, 130]},
     {name: "home",  html: "<li><button>home</button><li>",  color: [238, 130, 238]}
   ];
-  ```
-- **Question:** do we need to have a separate definition for the transforming
-  function? What happens if we "inline" the function as a literal argument?
-- **Question:** what are the costs and benefits of using this inline, anonymous
-  function?
-- **Practice (WD): (5 minutes)**
-
-  ```js
-  // lessons/map/mapPractice.js
-
-  (TODO)
-  
-  hmmmmmmmmmm
   ```    
-- **Question:** how did we know we could get the index of the array? What
-  complications are there for understanding / memorizing how to use functions
-  that take other functions as arguments.
 - **Question:** is there a helpful process to apply when building a mapping 
   iteration?
     - *Transform one item, ensure it works, and then apply it to all items
-      with `#map`.
+      with `#map`.*
 
 `Array.prototype.map` is not only useful because it allows us to write
 less code (though that is nice), and more semantic code (also nice), but
