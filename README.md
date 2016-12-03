@@ -105,10 +105,10 @@ back into the swing of iteration by practicing a little.
       "bespoke scrimshaw chew-toys",
       "a pop-up dedicated to pocket-sized portraits",
       "an artisanal, fair-trade confectionary",
-      "typewrite repair",
+      "typewriter repair",
       "a baby co-learning space named Olive & Sprigg",
-      "hand-sewn broomes and pickles",
-      "composting collectives"
+      "hand-sewn brooms and pickles",
+      "an explicity feminist composting collective"
     ];
 
     // 2.  Ok, I think we've settled on a boutique for home goods made from
