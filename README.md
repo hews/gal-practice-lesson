@@ -20,7 +20,7 @@
 | Applied    | Perform basic data transformations using `Array.prototype.map` in JavaScript. |
 | Conceptual | Recall the signatures of `Array.prototype.map` and the callback passed to it. |
 | Conceptual | Explain when you would want to use `Array.prototype.map` instead of a `for` loop. |
-| Conceptual | List the four essential actions you can apply to sequences/iterables in JavaScript, and explain when to use each. |
+| Conceptual | List the four essential actions you can apply to collections in JavaScript, and explain when to use each. |
 
 ## Estimated Length
 
@@ -71,9 +71,9 @@ We've already been introduced to the idea of iteration with one of the central
 constructs of JavaScript and most *structured* (ie, modern) languages: the
 `for` loop!
 
-- **Question (CFU):** *What does iteration mean?*
-- **Question (CFU):** *How are `for` loops different from other loops?
-  When and why do you use them?*
+- **Question (CFU):** what does iteration mean?
+- **Question (CFU):** how are `for` loops different from other loops?
+  When and why do you use them?
 
 In essence, whenever we iterate, we can do it with a `for` loop. So let's get
 back into the swing of iteration by practicing a little.
@@ -311,7 +311,7 @@ It's a really helpful pattern! However:
 > JavaScript, and note when we will cover them in-depth; the below activity can
 > be made part of enrichment or a stretch goal for the exercise, however.*
 
-We've introduced a ***big new idea** in this lesson: **callbacks**.
+We've introduced a ***big new idea*** in this lesson: **callbacks**.
 
 **Callbacks are functions that are passed as arguments to other functions.**
 There are all kinds of uses of callbacks; they are, in fact, the dominant mode
@@ -360,7 +360,7 @@ together.
 ##### Random Call
 
 - **Question (CFU):** can you list the four essential actions you can apply to 
-  sequences/iterables in JavaScript, and explain when to use each.
+  collections in JavaScript, and explain when to use each.
 - **Question (CFU):** can you explain when you would want to use 
   `Array.prototype.map` instead of a `for` loop, and vice versa? What are the
   costs and benefits?
