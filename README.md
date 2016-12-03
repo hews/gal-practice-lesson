@@ -86,7 +86,7 @@ back into the swing of iteration by practicing a little.
 - **Practice (YD): (8 minutes)**
     
     ```js
-    // lessons/map/iterationPractice.js
+    // lessons/map/forPractice.js
 
     /*
      * Programming is too tough! We've decied to get out of the game and
@@ -123,7 +123,7 @@ back into the swing of iteration by practicing a little.
       "bernie sanders throw pillow",
       "gender-neutral hobby smocks",
       "himalayan salt cellar",
-      "cruelty-free, no-tears dog shampoo"
+      "cruelty-free dog shampoo"
     ];
 
     let newStock = [];
@@ -186,21 +186,24 @@ iteration method, `#map`!
 ### Iteration Method: Map (`Array.prototype.map`)
 
 Mapping is an incredibly common action. Remember, **we use `#map` when we want
-to transform each value in an array to a new value**. Real world examples of
+to transform each value in an array into a new value**. Real world examples
 using this include:
 
 1.  reformatting a series of strings or other values for display,
-2.  turning a collection of large, complex objects into single, much 
-    simpler values,
-3.  performing some calculation between a value (a timestamp, eg) and a
-    series of objects (for example, updating each object to show time
-    elapsed since created),
+2.  turning a collection of large, complex objects into single, simple values,
+3.  performing some calculation between a value (eg, a timestamp) and a
+    series of objects (eg, updating each object to show time elapsed since 
+    created),
 4.  &c.
 
 So, how does map work? Well, let's look at the solution to the above practice
 using `#map`:
 
 ```js
+// lessons/map/mapPractice.js
+
+// Run this code.
+
 let oldStock = [
   "shibori-dyed dish towel",
   "hemp hamper for cloth diapers",
@@ -208,7 +211,7 @@ let oldStock = [
   "bernie sanders throw pillow",
   "gender-neutral hobby smocks",
   "himalayan salt cellar",
-  "cruelty-free, no-tears dog shampoo"
+  "cruelty-free dog shampoo"
 ];
 
 function putABirdOnIt(item) {
@@ -218,46 +221,82 @@ function putABirdOnIt(item) {
 let newStock = oldStock.map(putABirdOnIt);
 ```
 
+- **Question**: what stands out to you about this example? How does this method
+  look different than what we've been working on?
+- **Activity (WD)**: how can we learn more about what's happening here? Where
+  do we go to find out information about this method?
+  - [Visit the MDN docs.][mdn]
 
+Alright, that means it's time to practice! Let's do a few together.
 
-well, we have a method for that: .map!
+- **Practice (WD): (5 minutes)**
 
-:example
+  ```js
+  // lessons/map/mapPractice.js
 
-there are a lot of reasons why this is great, but in essnce it allows us
-to define a transformation, and then apply that transform to a collection of data.
+  /*
+   * Transform each of the below colors into hex values in the format:
+   * "#FF33A1", eg.
+   *
+   * Given: you can transform a decimal integer into a hexadecimal integer
+   * with #toString(16):
+   *
+   * (255).toString(16); //=> 'ff'
+   */
+  
+  let components = [
+    {name: "up",    html: "<li><button>up</button><li>",    color: [255,   0,   0]},
+    {name: "down",  html: "<li><button>down</button><li>",  color: [255, 165,   0]},
+    {name: "left",  html: "<li><button>left</button><li>",  color: [255, 255,   0]},
+    {name: "right", html: "<li><button>right</button><li>", color: [  0, 128,   0]},
+    {name: "prev",  html: "<li><button>prev</button><li>",  color: [  0,   0, 255]},
+    {name: "next",  html: "<li><button>next</button><li>",  color: [ 75,   0, 130]},
+    {name: "home",  html: "<li><button>home</button><li>",  color: [238, 130, 238]}
+  ];
+  ```
+- **Question:** do we need to have a separate definition for the transforming
+  function? What happens if we "inline" the function as a literal argument?
+- **Question:** what are the costs and benefits of using this inline, anonymous
+  function?
+- **Practice (WD): (5 minutes)**
 
-how do we learn about it?
+  ```js
+  // lessons/map/mapPractice.js
 
-:go to the docs…
+  (TODO)
+  
+  hmmmmmmmmmm
+  ```    
+- **Question:** how did we know we could get the index of the array? What
+  complications are there for understanding / memorizing how to use functions
+  that take other functions as arguments.
+- **Question:** is there a helpful process to apply when building a mapping 
+  iteration?
+    - *Transform one item, ensure it works, and then apply it to all items
+      with `#map`.
 
-:example x 2 of using a function on something, then mapping with it
-  - make sure one uses the index
+`Array.prototype.map` is not only useful because it allows us to write
+less code (though that is nice), and more semantic code (also nice), but
+because it helps us to think in terms of input and output, of defining a
+transformation and then applying that transformation to an entire collection.
+It's a really helpful pattern! However:
 
-this is one of the most common things we do in programming: take some input
-and transform it according to some rules. .map does that!
-
-:practice x 2
-
-questions:
-
-1.  what stands out to you about this process? how does this method look
-    different than what we've been working on?
-2.  is there a helpful process to apply when building a mapping iteration?
-    (suggest the transform one and then apply to all method…)
-3.  are there any reasons we might want to use a for loop instead?
-    - we aren't mapping (the big one)
-      - perform multiple types of iterations to the data (filtering/reducing, eg)
-    - break out of loop early
-    - not working with an array (objects, eg) or some structure that
-      hasn't implemented this interface
+- **Question:** are there any reasons we might want to use a for loop instead?
+    1.  We aren't mapping (the big one). Very often, `for` allows us to perform 
+        multiple types of iterations to the data at once, and also to cleanly
+        handle side effects.
+    2.  We want to break out of loop early.
+    3.  When we aren't working with an array, eg: objects, or some structure
+        that hasn't implemented this interface. See `for...in` and `for...of`.
 
 ### Callbacks: Functions as Arguments
 
 > *__Instructor:__ for purposes of time, this section can be shortened.
 > Introduce the idea of "callbacks", and "functions as first-class objects" in
-> JavaScript, and note when we will cover them in-depth, but the activity can
-> be made part of enrichment or a stretch goal for the exercise.*
+> JavaScript, and note when we will cover them in-depth; the below activity can
+> be made part of enrichment or a stretch goal for the exercise, however.*
+
+(TODO)
 
 this idea of passing one function to another is essential to JS, and we
 will return to it over and over and over…
@@ -277,12 +316,24 @@ http://underscorejs.org/docs/underscore.html#section-20
 > afterwards. If the exercise is done as an assignment outside of class, plan
 > time to do the first question in it as a "you do" before doing the wrap-up.*
 
-CFU - objectives
-Questions and themes
+##### Random Call
 
-## Example Student Lesson Version (Handout)
+- **Question (CFU):** can you list the four essential actions you can apply to 
+  sequences/iterables in JavaScript, and explain when to use each.
+- **Question (CFU):** can you explain when you would want to use 
+  `Array.prototype.map` instead of a `for` loop, and vice versa? What are the
+  costs and benefits?
+- **Question (CFU):** can you recall the signatures of `Array.prototype.map` and
+  the callback passed to it.
 
-abbreviated version with the code examples and docs links.
+## Example Student Lesson
+
+(TODO)
+
+Repo
+  - abbreviated version with the code examples and docs links.
+  - practice one
+  - practice two (w/ specs)
 
 ## Example Exercise
 
@@ -312,3 +363,4 @@ Map-specific example
 <!-- LINKS -->
 
 [enum]: https://en.wikipedia.org/wiki/Enumeration
+[mdn]:  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
