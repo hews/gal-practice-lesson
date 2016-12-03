@@ -99,7 +99,7 @@ back into the swing of iteration by practicing a little.
      */
 
     // 1.  Print each of the following ideas to standard out, in the form
-    //     of, "Hmmm, what do you think about (idea)? Would that work?"
+    //     of, "Hmmm, how about (idea)? Would that work?"
     let ideas = [
       "a mayonnaise atelier",
       "bespoke scrimshaw chew-toys",
@@ -116,7 +116,7 @@ back into the swing of iteration by practicing a little.
     //     and screen-print birds on everything. Take our stock, and replace 
     //     each item with a string in the form of:
     //     "(original item) with a bird on it".
-    let oldStock = [
+    let stock = [
       "shibori-dyed dish towel",
       "hemp hamper for cloth diapers",
       "willamette beekeepers' collective mustache wax kit",
@@ -131,7 +131,7 @@ back into the swing of iteration by practicing a little.
     // 3.  At the bicycle store there are too many bicycles! We need to scale
     //     down our options. Let's not consider bicycle that costs over $500,
     //     putting the rest into possibleBicycles.
-    let allBicycles = [
+    let bicycles = [
       {model: "Specialized Diverge A1", price: 800.00},
       {model: "Pure Fix 'The India'",   price: 329.00},
       {model: "Kona Africa Bike 3",     price: 450.00},
@@ -144,9 +144,9 @@ back into the swing of iteration by practicing a little.
     let possibleBicycles = [];
 
     // 4.  Come to think of it, selling bicycles might be an even better idea
-    //     than home goods with screen-printed birds. What is the average
-    //     profit you make on a bicycle sale, given the data below?
-    let allBicycles = [
+    //     than home goods with screen-printed birds. What is the total
+    //     profit you can make selling these bikes, given the data below?
+    let bicycles = [
       {model: "Specialized Diverge A1", grossProfit: 200.00},
       {model: "Pure Fix 'The India'",   grossProfit: 85.00},
       {model: "Kona Africa Bike 3",     grossProfit: 92.00},
@@ -156,7 +156,7 @@ back into the swing of iteration by practicing a little.
       {model: "Felt Burner",            grossProfit: 138.00},
       {model: "Fuji Feather",           grossProfit: 100.00}
     ];
-    let averageGrossProfit = 0;
+    let totalGrossProfit = 0;
     ```
 - **Question:** what was similar about the solutions to each of these problems,
   and what was different. (Think in terms of input, output, and side effects.)
@@ -202,9 +202,11 @@ using `#map`:
 ```js
 // lessons/map/mapPractice.js
 
-// Run this code.
+/*
+ * Example code.
+ */
 
-let oldStock = [
+let stock = [
   "shibori-dyed dish towel",
   "hemp hamper for cloth diapers",
   "willamette beekeepers' collective mustache wax kit",
@@ -218,7 +220,7 @@ function putABirdOnIt(item) {
   return item + " with a bird on it";
 }
 
-let newStock = oldStock.map(putABirdOnIt);
+let newStock = stock.map(putABirdOnIt);
 ```
 
 - **Question**: what stands out to you about this example? How does this method
@@ -341,12 +343,10 @@ http://underscorejs.org/docs/underscore.html#section-20
 
 ## Example Student Lesson
 
-(TODO)
-
-Repo
-  - abbreviated version with the code examples and docs links.
-  - practice one
-  - practice two (w/ specs)
+[Lesson Repo][repo]
+  - [Handout][handout]
+  - [`for` Practice][for-prc] – [solution][for-sol]
+  - [`#map` Practice][map-prc] – [solution][map-sol]
 
 ## Example Exercise
 
@@ -377,3 +377,10 @@ Map-specific example
 
 [enum]: https://en.wikipedia.org/wiki/Enumeration
 [mdn]:  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+
+[repo]:    https://gist.github.com/hews/5528dfcd982b1959eab4156d8a760527
+[handout]: https://gist.github.com/hews/5528dfcd982b1959eab4156d8a760527#file-handout-md
+[for-prc]: https://gist.github.com/hews/5528dfcd982b1959eab4156d8a760527#file-forpractice-js
+[for-sol]: https://gist.github.com/hews/5528dfcd982b1959eab4156d8a760527#file-_-solution_forpractice-js
+[map-prc]: https://gist.github.com/hews/5528dfcd982b1959eab4156d8a760527#file-mappractice-js
+[map-sol]: https://gist.github.com/hews/5528dfcd982b1959eab4156d8a760527#file-_-solution_mappractice-js
