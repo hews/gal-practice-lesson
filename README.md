@@ -20,13 +20,13 @@
 | Applied    | Perform basic data transformations using `Array.prototype.map` in JavaScript. |
 | Conceptual | Recall the signatures of `Array.prototype.map` and the callback passed to it. |
 | Conceptual | Explain when you would want to use `Array.prototype.map` instead of a `for` loop. |
-| Conceptual | List the four fundamental actions you can apply to sequences/iterables in JavaScript, and explain when to use each. |
+| Conceptual | List the four essential actions you can apply to sequences/iterables in JavaScript, and explain when to use each. |
 
 ## Estimated Length
 
 | Task                      | Minutes |
 |:--------------------------|:-------:|
-| Instruction               |    25   |
+| Instruction               |    35   |
 | Activities and challenges |    25   |
 | Wrap-up                   |    10   |
 
@@ -53,58 +53,172 @@ In this lesson we are going to introduce the idea of *iteration* and *iteration
 methods* (see **[Note 1](#notes)**). These tools help us to work with 
 collections of data in an organized way.
 
-When do we work with collections of data, using *iteration methods*?
+When do we work with collections of data, using *iteration methods*? Examples:
 
-When sending or recieving HTTP/XHR requests (usually via JSON), when inserting 
-or querying data stored in NoSQL databases (usually via JSON/BSON), when
-presenting data to the user via a UI, or reading in data submitted into forms.
+1.  sending or recieving HTTP requests (usually via JSON),
+2.  inserting or querying data stored in NoSQL databases (often via JSON/BSON),
+3.  presenting data to the user via a UI, or reading in data submitted into 
+    forms, or even…
+4.  doing analytics or "data science:" mining data for new information or 
+    insights!
 
-In short, almost everything we do in JavaScript-based web applications!
+In short, almost everything we do in JavaScript-based web applications relies on
+using iteration methods with data collections!
 
 ### Iteration and Iteration Methods
 
-you know about for loop already.
+We've already been introduced to the idea of iteration with one of the central
+constructs of JavaScript and most *structured* (ie, modern) languages: the
+`for` loop!
 
-q: how is it different from other loops? when do you use it?
+- **Question (CFU):** *What does iteration mean?*
+- **Question (CFU):** *How are `for` loops different from other loops?
+  When and why do you use them?
 
-:practice x 2 (begin using the theme of the whole lesson)
-    
-    1.  good candidate for for loop A
-    2.  good candidate for for loop B
-
---common iteration action--
-
-so, given that you want to want to iterate over an array, blah blah
+In essence, whenever we iterate, we can do it with a `for` loop. So let's get
+back into the swing of iteration by practicing a little.
 
 > *__Instructor:__ though it's not suggested, you may abbreviate the below
 > "you do" activities to questions 1 and 2 if you want to complete the lesson
 > sooner or if the students are having trouble with basic for-loop syntax. See
 > __[Note 2](#notes)__.*
 
-:write for loops that do the following: 
+- **Practice (YD): (8 minutes)**
+    
+    ```js
+    // lessons/map/iterationPractice.js
 
-    1.  print each item to the screen.
-    2.  map each item
-    3.  filter the items
-    4.  reduce the items (average)
+    /*
+     * Programming is too tough! We've decied to get out of the game and
+     * use our savings to start a hip boutique in Portland, Oregon, where
+     * "young people go to retire."
+     *
+     * First, let's brainstorm some ideas about what our boutique is going
+     * to sell! After that we have to go buy a bicycle to get around. This
+     * city is not very car friendly!
+     */
 
-in fact, these are such common ways to work with data, they are grouped
-together with a set of convenience methods in nearly all languages with
-"functional" characteristics. these are often called enumerator or 
-iterator functions* (for convenience we will use the term iterator/iterable),
-and do:
+    // 1.  Print each of the following ideas to standard out, in the form
+    //     of, "Hmmm, what do you think about (idea)? Would that work?"
+    let ideas = [
+      "a mayonnaise atelier",
+      "bespoke scrimshaw chew-toys",
+      "a pop-up dedicated to pocket-sized portraits",
+      "an artisanal, fair-trade confectionary",
+      "typewrite repair",
+      "a baby co-learning space named Olive & Sprigg",
+      "hand-sewn broomes and pickles",
+      "composting collectives"
+    ];
 
-1.  each/forEach: simple iteration
-2.  map/collect
-3.  filter/select
-4.  reduce/inject/fold
+    // 2.  Ok, I think we've settled on a boutique for home goods made from
+    //     locally and sustainably. Let's do it right though, and go through 
+    //     and screen-print birds on everything. Take our stock, and replace 
+    //     each item with a string in the form of
+    //     "(original item) with a bird on it"
+    let oldStock = [
+      "shibori-dyed dish towel",
+      "hemp hamper for cloth diapers",
+      "willamette beekeepers' collective mustache wax kit",
+      "bernie sanders throw pillow",
+      "his & hers hobby smocks",
+      "himalayan salt cellar",
+      "cruelty-free, no-tears dog shampoo"
+    ];
+
+    let newStock = [];
+
+    // 3.  At the bicycle store there are too many bicycles! We need to scale
+    //     down our options. Let's not consider bicycle that costs over $500,
+    //     putting the rest into possibleBicycles.
+    let allBicycles = [
+      {model: "Specialized Diverge A1", price: 800.00},
+      {model: "Pure Fix 'The India'",   price: 329.00},
+      {model: "Kona Africa Bike 3",     price: 450.00},
+      {model: "Salsa Marrakesh",        price: 1400.00},
+      {model: "Schwinn Madison",        price: 379.00},
+      {model: "Shinola Bixby Cruiser",  price: 1950.00},
+      {model: "Felt Burner",            price: 650.00},
+      {model: "Fuji Feather",           price: 469.00}
+    ];
+    let possibleBicycles = [];
+
+    // 4.  Come to think of it, selling bicycles might be an even better idea
+    //     than home goods with screen-printed birds. What is the average
+    //     profit you make on a bicycle sale, given the data below?
+    let allBicycles = [
+      {model: "Specialized Diverge A1", grossProfit: 200.00},
+      {model: "Pure Fix 'The India'",   grossProfit: 85.00},
+      {model: "Kona Africa Bike 3",     grossProfit: 92.00},
+      {model: "Salsa Marrakesh",        grossProfit: 320.00},
+      {model: "Schwinn Madison",        grossProfit: 60.00},
+      {model: "Shinola Bixby Cruiser",  grossProfit: 285.00},
+      {model: "Felt Burner",            grossProfit: 138.00},
+      {model: "Fuji Feather",           grossProfit: 100.00}
+    ];
+    let averageGrossProfit = 0;
+    ```
+- **Question:** what was similar about the solutions to each of these problems,
+  and what was different. (Think in terms of input, output, and side effects.)
+
+In fact, these four problems represent the essential types of iterative actions
+you perform on data collection:
+
+1.  Repetition (simple iteration): perform some action for each item in
+    a collection, usually resulting in a side effect (instead of returning a
+    value). Common method names: `#forEach` (JavaScript), `#each`.
+2.  Mapping, or transforming: transform each item in the given collection into
+    a new format. This returns a collection of the same size, with each item
+    having been "mapped" to a new value. Common method names: `#map` 
+    (JavaScript), `#collect`.
+3.  Filtering: transform the collection itself, removing certain items, and
+    returning a new collection. The items themselves are not transformed.
+    Common method names: `#filter` (JavaScript), `#select`, `#reject`.
+4.  Reducing: transform the collection itself, returning some value (usually) of
+    a different type. The returned value can be a single piece of data or a
+    new collection, but is always the result of applying a reduction algorithm
+    to each item in the original array. Common method names: `#reduce` 
+    (JavaScript), `#inject`, `#fold`.
+
+We will cover each of these in turn, but begin with the most commonly used
+iteration method, `#map`!
 
 ### Iteration Method: Map (`Array.prototype.map`)
 
-we're going to start with map.
+Mapping is an incredibly common action. Remember, **we use `#map` when we want
+to transform each value in an array to a new value**. Real world examples of
+using this include:
 
-this is a very common thing. we want to create a new array of values that
-correspond to values in the old array. real world examples include...
+1.  reformatting a series of strings or other values for display,
+2.  turning a collection of large, complex objects into single, much 
+    simpler values,
+3.  performing some calculation between a value (a timestamp, eg) and a
+    series of objects (for example, updating each object to show time
+    elapsed since created),
+4.  &c.
+
+So, how does map work? Well, let's look at the solution to the above practice
+using `#map`:
+
+```js
+let oldStock = [
+  "shibori-dyed dish towel",
+  "hemp hamper for cloth diapers",
+  "willamette beekeepers' collective mustache wax kit",
+  "bernie sanders throw pillow",
+  "his & hers hobby smocks",
+  "himalayan salt cellar",
+  "cruelty-free, no-tears dog shampoo"
+];
+
+function putABirdOnIt(item) {
+  return item + " with a bird on it";
+}
+
+let newStock = oldStock.map(putABirdOnIt);
+```
+
+
 
 well, we have a method for that: .map!
 
@@ -177,14 +291,15 @@ abbreviated version with the code examples and docs links.
 Map-specific example
 
 ---
-<a name="notes"></a>
 
-- **Note 1:** There isn't a clear, universal, collective term for the group of 
-  methods we are describing here. Common names usually include the terms 
-  *iterate*, [*enumerate*][enum], and/or *functional*.  Since in JavaScript 
-  these methods will work on instances of the `Iterator` class and the 
-  *iterable* interface defined for the `for...of` construct, we will use the 
-  terms **iteration** and **iteration methods**.
+- <a name="notes"></a> **Note 1:** There isn't a clear, universal, collective 
+  term for the group of methods we are describing here. Common names usually
+  include the terms *iterate*, [*enumerate*][enum], and/or *functional*.  Since 
+  in JavaScript these data transformation practices hold for Arrays as well as 
+  instances of the `Iterator` class and the *iterable protocol* defined for the 
+  `for...of` construct, we will use the terms **iteration** and **iteration 
+  methods**. This despite the fact that you can not natively use `#map`/`#filter`
+  and `#reduce` (only `#forEach`) with the other collection built-ins yet.
 - **Note 2:** If the students are not fluently writing for loops in the 
   introduction to this assignment, then they need to receive more practice 
   immediately: this ability is assumed for all upcoming lessons. Do two things:
