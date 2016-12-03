@@ -26,7 +26,7 @@
 
 | Task                      | Minutes |
 |:--------------------------|:-------:|
-| Instruction               |    35   |
+| Instruction               |  25-40  |
 | Activities and challenges |    25   |
 | Wrap-up                   |    10   |
 
@@ -83,7 +83,7 @@ back into the swing of iteration by practicing a little.
 > sooner or if the students are having trouble with basic for-loop syntax. See
 > __[Note 2](#notes)__.*
 
-- **Practice (YD): (8 minutes)**
+- **Practice (YD): (10 minutes)**
     
     ```js
     // lessons/map/forPractice.js
@@ -231,7 +231,7 @@ let newStock = stock.map(putABirdOnIt);
 
 Alright, that means it's time to practice! Let's do a few together.
 
-- **Practice (WD): (5 minutes)**
+- **Practice (WD): (8 minutes)**
 
   ```js
   // lessons/map/mapPractice.js
@@ -260,7 +260,7 @@ Alright, that means it's time to practice! Let's do a few together.
   - *Note that we lose testability and semantic naming, gain clarity and
     readability. Quickly note there are actually more issues we will approach 
     later.*
-- **Practice (WD): (5 minutes)**
+- **Practice (WD): (8 minutes)**
 
   ```js
   // lessons/map/mapPractice.js
@@ -311,19 +311,45 @@ It's a really helpful pattern! However:
 > JavaScript, and note when we will cover them in-depth; the below activity can
 > be made part of enrichment or a stretch goal for the exercise, however.*
 
-(TODO)
+We've introduced a ***big new idea** in this lesson: **callbacks**.
 
-this idea of passing one function to another is essential to JS, and we
-will return to it over and over and over…
+**Callbacks are functions that are passed as arguments to other functions.**
+There are all kinds of uses of callbacks; they are, in fact, the dominant mode
+in Node.js for handling your program's input and output, ie communication with
+the outside world.
 
-first class functions
+We will return to the use of callbacks more in-depth, and practice using them
+over and over and over. For now, just get used to:
 
-:we do
+1.  the syntax of passing a defined function,
+2.  the syntax for declaring and passing an inline anonymous function, and
+3.  thinking of a function that has callback parameters as having
+    a more complex signature you have to remember.
 
-in fact, it's not a crazy idea, you can imagine how it works. let's build
-a simple version of the map function together!
+The reality is that functions with callbacks aren't *that crazy* to write and 
+understand! Let's actually go ahead and write a simple `#map` function all
+together.
 
-http://underscorejs.org/docs/underscore.html#section-20
+- **Practice (WD): (10 minutes)**
+  
+  ```js
+  /*
+   * Write a map utility function. Test it on the practice data. For example:
+   */
+  
+  function map(array, callback) {
+    let outputArray = [];
+    for (let i = 0, length = array.length, newValue; i < length; i++) {
+      newValue = callback(array[i], i);
+      outputArray.push(newValue);
+    }
+    return outputArray;
+  }
+  ```
+- **Enrichment:** a fun thing to do is look through the Underscore.js annotated
+  source code docs to see how the most popular JavaScript utility library
+  implements iteration methods.
+  - **[Check out the Underscore.js `_.map` function.][under-map]**
 
 ### Wrap-up
 
@@ -343,12 +369,14 @@ http://underscorejs.org/docs/underscore.html#section-20
 
 ## Example Student Lesson
 
-[Lesson Repo][repo]
+**[Lesson Repo][repo]**
   - [Handout][handout]
   - [`for` Practice][for-prc] – [solution][for-sol]
   - [`#map` Practice][map-prc] – [solution][map-sol]
 
 ## Example Exercise
+
+(TODO)
 
 ~~**[The Fixer]()**~~
 
@@ -384,3 +412,5 @@ Map-specific example
 [for-sol]: https://gist.github.com/hews/5528dfcd982b1959eab4156d8a760527#file-xx_-solution_forpractice-js
 [map-prc]: https://gist.github.com/hews/5528dfcd982b1959eab4156d8a760527#file-xmappractice-js
 [map-sol]: https://gist.github.com/hews/5528dfcd982b1959eab4156d8a760527#file-xx_-solution_mappractice-js
+
+[under-map]: http://underscorejs.org/docs/underscore.html#section-20
