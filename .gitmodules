@@ -19,3 +19,6 @@
 [submodule "activity"]
 	path = activity
 	url = git@gist.github.com:3deafcb8c750ad95ace5a955e35effb7.git
+[submodule "student-repo"]
+	path = student-repo
+	url = git@gist.github.com:5528dfcd982b1959eab4156d8a760527.git
