@@ -27,10 +27,25 @@
 | Task                      | Minutes |
 |:--------------------------|:-------:|
 | Instruction               |  25-40  |
-| Activities and challenges |    25   |
+| Activities and challenges |  25-45  |
 | Wrap-up                   |    10   |
 
-## Example Lesson Plan
+## Example Student Lesson
+
+**[Lesson Repo][repo]**
+  - [Handout][handout]
+  - [`for` Practice][for-prc] – [solution][for-sol]
+  - [`#map` Practice][map-prc] – [solution][map-sol]
+
+## Example Exercise
+
+- **[The Sorcerer's Apprentice][activity]** (unfinished)
+
+## Example Deck
+
+- *None available.*
+
+## Example Insructor Lesson Plan
 
 ### Framing
 
@@ -367,17 +382,6 @@ together.
   costs and benefits?
 - **Question (CFU):** can you recall the signatures of `Array.prototype.map` and
   the callback passed to it.
-
-## Example Student Lesson
-
-**[Lesson Repo][repo]**
-  - [Handout][handout]
-  - [`for` Practice][for-prc] – [solution][for-sol]
-  - [`#map` Practice][map-prc] – [solution][map-sol]
-
-## Example Exercise
-
-- **[The Sorcerer's Apprentice][activity]** (unfinished)
 
 ---
 
