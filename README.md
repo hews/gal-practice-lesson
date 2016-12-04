@@ -45,7 +45,7 @@
 
 - *None available.*
 
-## Example Insructor Lesson Plan
+## Example Instructor Lesson Plan
 
 ### Framing
 
