@@ -1,0 +1,15 @@
+{
+  "name": "map-mania",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha mapManiaSpec.js"
+  },
+  "author": "Philip Hughes <p+npm@hews.co> (http://hews.co)",
+  "license": "UNLICENSED",
+  "homepage": "https://gist.github.com/9066757603d2d6c9519730534f42c269",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2"
+  }
+}

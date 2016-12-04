@@ -104,6 +104,7 @@ back into the swing of iteration by practicing a little.
       "a mayonnaise atelier",
       "bespoke scrimshaw chew-toys",
       "a pop-up dedicated to pocket-sized portraits",
+      "hand-poured, cat-themed, soy candles",
       "an artisanal, fair-trade confectionary",
       "typewriter repair",
       "a baby co-learning space named Olive & Sprigg",
@@ -376,7 +377,7 @@ together.
 
 ## Example Exercise
 
-- **[Map-mania][map-mania]** (unfinished)
+- **[The Sorcerer's Apprentice][exercise]** (unfinished)
 
 ---
 
@@ -411,4 +412,4 @@ together.
 
 [under-map]: http://underscorejs.org/docs/underscore.html#section-20
 
-[map-mania]: https://gist.github.com/hews/9066757603d2d6c9519730534f42c269
+[exercise]: https://gist.github.com/hews/9066757603d2d6c9519730534f42c269
