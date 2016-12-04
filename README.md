@@ -1,8 +1,12 @@
-### Lesson Objective
+### Prompt
+
+Write a lesson for:
+
+**Lesson Objective**
 
 - Perform basic data transformations using `Array.prototype.map` in JavaScript.
 
-### Assumptions
+**Assumptions**
 
 - Students have written applications in Java, Ruby, or any other OO language
   for 2-3 years.
