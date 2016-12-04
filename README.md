@@ -377,7 +377,7 @@ together.
 
 ## Example Exercise
 
-- **[The Sorcerer's Apprentice][exercise]** (unfinished)
+- **[The Sorcerer's Apprentice][activity]** (unfinished)
 
 ---
 
@@ -393,7 +393,7 @@ together.
   introduction to this assignment, then they need to receive more practice 
   immediately: this ability is assumed for all upcoming lessons. Do two things:
 
-  1.  Have all the students write out answers to this lesson's exercise using
+  1.  Have all the students write out answers to this lesson's activity using
       `for` loop syntax (first), and then `#map` syntax.
   2.  Offer an optional exercise as an out-of-class assignment that allows them
       to practice writing `for` loops.
@@ -412,4 +412,4 @@ together.
 
 [under-map]: http://underscorejs.org/docs/underscore.html#section-20
 
-[exercise]: https://gist.github.com/hews/9066757603d2d6c9519730534f42c269
+[activity]: https://gist.github.com/hews/9066757603d2d6c9519730534f42c269
