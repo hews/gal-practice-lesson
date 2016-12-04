@@ -37,7 +37,7 @@
   - [`for` Practice][for-prc] – [solution][for-sol]
   - [`#map` Practice][map-prc] – [solution][map-sol]
 
-## Example Exercise
+## Example Activity
 
 - **[The Sorcerer's Apprentice][activity]** (unfinished)
 
